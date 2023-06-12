@@ -33,11 +33,13 @@ button:hover {
 }
 
 .header-container {
-  background-color: rgb(1, 1, 48);
+  background-color: rgba(30, 48, 102, 0.742);
+  /* background-color: rgb(1, 1, 48); */
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 70px;
+  border-radius: 10px;
 }
 </style>
