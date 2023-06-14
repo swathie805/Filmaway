@@ -3,12 +3,12 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAZ_UpSx_YoONNl1QKUatYF-m4THaHvy8k",
-  authDomain: "summative-b3c37.firebaseapp.com",
-  projectId: "summative-b3c37",
-  storageBucket: "summative-b3c37.appspot.com",
-  messagingSenderId: "198679112939",
-  appId: "1:198679112939:web:782b1289e09601aa3ce2ae"
+  apiKey: "AIzaSyA3mKgPdZ3Se10PxDwBn5YdsDJ-mH16C-o",
+  authDomain: "vue-project-cdfdc.firebaseapp.com",
+  projectId: "vue-project-cdfdc",
+  storageBucket: "vue-project-cdfdc.appspot.com",
+  messagingSenderId: "717601307619",
+  appId: "1:717601307619:web:73fbba4e0277c9c98cfed6"
 };
 
 const config = initializeApp(firebaseConfig);
