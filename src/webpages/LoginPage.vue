@@ -19,7 +19,9 @@ const passwordTwo = ref("");
 
 const registerViaEmail = async () => {
   if (passwordOne.value !== passwordTwo.value) {
-    alert("You're currently facing short-term memory loss; you typed the password incorrectly.");
+    alert(
+      "You're currently facing short-term memory loss; you typed the password incorrectly."
+    );
     return;
   }
 
@@ -49,9 +51,12 @@ const loginViaEmail = async () => {
 const registerViaGoogle = async () => {
   const provider = new GoogleAuthProvider();
   const { user } = await signInWithPopup(auth, provider);
+  const firestoreCart = await getDoc(doc(firestore, "carts", user.email));
   store.user = user;
-  const { cart } = (await getDoc(doc(firestore, "carts", user.email))).data();
-  store.cart = cart;
+  if (firestoreCart.exists()) {
+    const { cart } = firestoreCart.data();
+    store.cart = cart;
+  }
   router.push("/purchase");
 };
 </script>

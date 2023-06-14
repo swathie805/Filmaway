@@ -8,7 +8,7 @@ const firebaseConfig = {
   projectId: "filmaway-b43e9",
   storageBucket: "filmaway-b43e9.appspot.com",
   messagingSenderId: "106374667824",
-  appId: "1:106374667824:web:e8249c9729c3193d8957f5"
+  appId: "1:106374667824:web:e8249c9729c3193d8957f5",
 };
 
 const config = initializeApp(firebaseConfig);
