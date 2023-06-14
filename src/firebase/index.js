@@ -3,12 +3,12 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA3mKgPdZ3Se10PxDwBn5YdsDJ-mH16C-o",
-  authDomain: "vue-project-cdfdc.firebaseapp.com",
-  projectId: "vue-project-cdfdc",
-  storageBucket: "vue-project-cdfdc.appspot.com",
-  messagingSenderId: "717601307619",
-  appId: "1:717601307619:web:73fbba4e0277c9c98cfed6"
+  apiKey: "AIzaSyAu4GME75pvrKms_sKiN7aaPVGxdxp-fJw",
+  authDomain: "filmaway-b43e9.firebaseapp.com",
+  projectId: "filmaway-b43e9",
+  storageBucket: "filmaway-b43e9.appspot.com",
+  messagingSenderId: "106374667824",
+  appId: "1:106374667824:web:e8249c9729c3193d8957f5"
 };
 
 const config = initializeApp(firebaseConfig);
