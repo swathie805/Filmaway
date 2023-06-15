@@ -4,9 +4,9 @@ import { useStore } from "../store/index.js";
 const store = useStore();
 
 const removeItem = (movie) => {
-  const index = store.cart.findIndex(item => item.id === movie.id);
+  const index = store.cart.findIndex((item) => item.id === movie.id);
   if (index > -1) {
-    this.$delete(store.removeFromCart(index));
+    store.removeFromCart(index);
   }
 };
 </script>
