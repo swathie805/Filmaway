@@ -17,7 +17,7 @@ export const useStore = defineStore('store', {
       await setDoc(doc(firestore, "carts", this.user.email), { cart: this.cart });
     },
     async removeFromCart(index) {
-      this.cart.splice(index, 1);
+      this.cart.splice(index, 0);
       await setDoc(doc(firestore, "carts", this.user.email), {
         cart: this.cart,
       });

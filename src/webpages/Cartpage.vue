@@ -5,9 +5,9 @@ const store = useStore();
 
 const removeItem = (movie) => {
   const index = store.cart.findIndex((item) => item.id === movie.id);
-  if (index > -1) {
+  // if (index ) {
     store.removeFromCart(index);
-  }
+  // }
 };
 </script>
 
