@@ -13,8 +13,7 @@ const router = useRouter();
 
 <style scoped>
 .header-container {
-  background-color: rgb(1,1,48);
-  /* background-image: url(https://media.istockphoto.com/id/1364376802/vector/glow-modern-background-blur.jpg?s=612x612&w=0&k=20&c=SBOz5Ge_Q_jidQ--q2Cud70BJk8AOcdnWFRT1jh65BQ=); */
+  background-color: rgb(1, 1, 48);
   display: flex;
   justify-content: space-between;
   align-items: center;

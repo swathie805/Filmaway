@@ -62,41 +62,44 @@ const registerViaGoogle = async () => {
 </script>
 
 <template>
-   <img
+  <img
     id="bg-image"
     :src="`https://media.istockphoto.com/id/1364376802/vector/glow-modern-background-blur.jpg?s=612x612&w=0&k=20&c=SBOz5Ge_Q_jidQ--q2Cud70BJk8AOcdnWFRT1jh65BQ=`"
     alt=""
   />
-    <div class="auth-container">
-      <div id="login">
-        <h1>Login via Email</h1>
-        <form class="login" @submit.prevent="loginViaEmail()">
-          <input v-model="email" type="email" placeholder="Email" />
-          <input v-model="passwordOne" type="password" placeholder="Password" />
-          <input class="btn" type="submit" value="Login" />
-        </form>
-      </div>
-      <div class="vl"></div>
-      <div class="register">
-        <h1>Register via Email</h1>
-        <form class="setup" @submit.prevent="registerViaEmail()">
-          <input v-model="email" type="email" placeholder="email" />
-          <input
-            v-model="passwordOne"
-            type="password"
-            placeholder="Enter Password"
-          />
-          <input
-            v-model="passwordTwo"
-            type="password"
-            placeholder="Re-enter Password"
-          />
-          <input class="btn" type="submit" value="Register" />
-        </form>
-        <!-- <button class="google-login" @click="registerViaGoogle()"> <img src="https://cdn-icons-png.flaticon.com/512/270/270014.png" /></button> -->
-        <img class="google-login" @click="registerViaGoogle()" src="https://cdn-icons-png.flaticon.com/512/270/270014.png" />
-      </div>
+  <div class="auth-container">
+    <div id="login">
+      <h1>Login via Email</h1>
+      <form class="login" @submit.prevent="loginViaEmail()">
+        <input v-model="email" type="email" placeholder="Email" />
+        <input v-model="passwordOne" type="password" placeholder="Password" />
+        <input class="btn" type="submit" value="Login" />
+      </form>
     </div>
+    <div class="vl"></div>
+    <div class="register">
+      <h1>Register via Email</h1>
+      <form class="setup" @submit.prevent="registerViaEmail()">
+        <input v-model="email" type="email" placeholder="email" />
+        <input
+          v-model="passwordOne"
+          type="password"
+          placeholder="Enter Password"
+        />
+        <input
+          v-model="passwordTwo"
+          type="password"
+          placeholder="Re-enter Password"
+        />
+        <input class="btn" type="submit" value="Register" />
+      </form>
+      <img
+        class="google-login"
+        @click="registerViaGoogle()"
+        src="https://cdn-icons-png.flaticon.com/512/270/270014.png"
+      />
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -125,7 +128,7 @@ const registerViaGoogle = async () => {
   align-items: center;
 }
 
-.vl{
+.vl {
   border-left: 6px solid white;
   height: 400px;
 }
@@ -137,7 +140,7 @@ const registerViaGoogle = async () => {
   gap: 1rem;
 }
 
-.register{
+.register {
   margin-right: 40px;
 }
 
@@ -153,7 +156,7 @@ const registerViaGoogle = async () => {
 }
 
 .btn {
-  background-color: rgb(3, 22, 85) ;
+  background-color: rgb(3, 22, 85);
   color: white;
   border: transparent;
   font-size: 20px;
