@@ -12,6 +12,7 @@
 
 <style scoped>
 .footer-container {
+  margin-top: 0;
   background-color: rgb(1, 1, 48);
   color: #00b4d8;
   padding: 20px;

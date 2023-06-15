@@ -20,7 +20,7 @@
 <style scoped>
 .pic-gradient {
   display: inline-block;
-  width: 100vw;
+  width: 90vw;
   background-image: linear-gradient(
     to right,
     rgb(0, 0, 0),
@@ -36,6 +36,7 @@
 }
 
 img {
+  margin-top: 0;
   width: 100vw;
   position: relative;
   display: block;
