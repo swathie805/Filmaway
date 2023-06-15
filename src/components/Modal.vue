@@ -95,7 +95,7 @@ h2 {
 
 h3 {
   cursor: pointer;
-  position: relative;
+  position: fixed;
   right: 10px;
   border-radius: 10px;
   margin-right: 20px;
@@ -104,6 +104,8 @@ h3 {
   background-color: #5398dd;
   padding: 15px;
   width: 80px;
+  right: 0;
+  bottom: 0;
 }
 
 h3:hover {

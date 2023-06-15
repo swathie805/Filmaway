@@ -3,6 +3,7 @@ import axios from "axios";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import Modal from "../components/Modal.vue";
+import Mainheader from "../components/Mainheader.vue";
 
 const router = useRouter();
 const genre = ref(28);
@@ -38,7 +39,7 @@ const getTMDBData = async (url, options, page) => {
 </script>
 
 <template>
-  <div>
+  <div id="bg">
     <div class="controls">
       <div>
         <input
@@ -90,6 +91,14 @@ const getTMDBData = async (url, options, page) => {
         <button @click="router.push('/cart')">Cart</button>
       </div>
     </div>
+    <div v-if="movies" class="tiles">
+      <div v-for="movie in movies.results" :key="movie.id" class="tile">
+        <img
+          :src="`https://image.tmdb.org/t/p/w500/${movie.poster_path}`"
+          @click="toggleModal(movie.id)"
+        />
+      </div>
+    </div>
     <div class="pagination">
       <button
         @click="
@@ -119,37 +128,70 @@ const getTMDBData = async (url, options, page) => {
         Next
       </button>
     </div>
-    <div v-if="movies" class="tiles">
-      <div v-for="movie in movies.results" :key="movie.id" class="tile">
-        <img
-          :src="`https://image.tmdb.org/t/p/w500/${movie.poster_path}`"
-          @click="toggleModal(movie.id)"
-        />
-      </div>
-    </div>
   </div>
   <Modal v-if="showModal" :id="selectedRecordId" @toggleModal="toggleModal()" />
 </template>
 
 <style scoped>
+#bg {
+  background-color: rgb(1,1,48);
+}
+
 .tiles {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 
 img {
-  width: 200px;
+  width: 350px;
 }
 
 .pagination {
   display: flex;
   gap: 1rem;
+  position: fixed;
+  right: 0px; bottom: 0px;
+ padding: 20px;
+ color: white;
+}
+
+input {
+  height: 42px;
+  border-radius: 5px;
+  font-size: larger;
+  font-family: "sans-serif";
 }
 
 .controls {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+}
+
+select {
+  font-family: "sans-serif";
+  font-size: 20px;
+  height: 42px;
+  border-radius: 5px;
+}
+
+p {
+  font-size: 20px;
+  align-self: center;
+}
+
+button {
+  border-radius: 5px;
+  width: 70px;
+  height: 45px;
+  font-family: "sans-serif";
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: #cddcff;
+  color: rgb(1, 1, 48);
+  filter: drop-shadow(-10px 10px 10px #7c83a5);
 }
 </style>
 
