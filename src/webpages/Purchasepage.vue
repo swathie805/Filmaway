@@ -147,7 +147,7 @@ const getTMDBData = async (url, options, page) => {
 }
 
 img {
-  width: 350px;
+  width: 300px;
 }
 
 .pagination {

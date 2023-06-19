@@ -141,11 +141,11 @@ const registerViaGoogle = async () => {
 }
 
 .register {
-  margin-right: 40px;
+  margin-right: 10px;
 }
 
 #login {
-  margin-left: 35px;
+  margin-left: 5px;
   margin-bottom: 60px;
 }
 
