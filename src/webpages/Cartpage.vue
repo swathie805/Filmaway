@@ -1,26 +1,27 @@
 <script setup>
+import { useRouter } from "vue-router";
 import { useStore } from "../store/index.js";
 
+const router = useRouter();
 const store = useStore();
 
 const removeItem = (movie) => {
-  const index = store.cart.findIndex((item) => item.id === movie.id);
-  // if (index ) {
-    store.removeFromCart(index);
-  // }
+  const index = store.cart.indexOf(movie);
+  store.removeFromCart(index);
 };
 </script>
 
 <template>
   <div id="bg">
-  <div class="cart-container">
-    <div class="items" v-for="movie in store.cart">
-      <h1 id="title">{{ movie.title }}</h1>
-      <img :src="`https://image.tmdb.org/t/p/w500/${movie.poster}`" />
-      <button @click="removeItem(movie)">Remove</button>
+    <button id="back" @click="router.push('/purchase')">Back to shop</button>
+    <div class="cart-container">
+      <div class="items" v-for="movie in store.cart">
+        <h1 id="title">{{ movie.title }}</h1>
+        <img :src="`https://image.tmdb.org/t/p/w500/${movie.poster}`" />
+        <button @click="removeItem(movie)">Remove</button>
+      </div>
     </div>
   </div>
-</div>
 </template>
 
 <style>
@@ -30,11 +31,17 @@ const removeItem = (movie) => {
 
 .cart-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  overflow-inline: auto;
   gap: 100px;
   width: 250px;
   padding-left: 68px;
   align-items: center;
+}
+
+#back {
+  width: 130px;
+  font-family: "sans-serif";
 }
 
 h1 {

@@ -87,7 +87,7 @@ const getTMDBData = async (url, options, page) => {
         >
           Get
         </button>
-        <button @click="router.push('/cart')">Cart</button>
+        <button id="cart" @click="router.push('/cart')" >Cart</button>/>
       </div>
     </div>
     <div v-if="movies" class="tiles">
@@ -134,6 +134,11 @@ const getTMDBData = async (url, options, page) => {
 <style scoped>
 #bg {
   background-color: rgb(1, 1, 48);
+}
+
+#cart {
+  border: transparent;
+  width: 80px;
 }
 
 .tiles {
